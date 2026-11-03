@@ -12,8 +12,7 @@ class Vehiculo {
 
 class Coche extends Vehiculo {
     constructor(marca, modelo, puertas) {
-        // ERROR: Se omite super(marca, modelo). 
-        // Node.js lanzará un ReferenceError: Must call super constructor in derived class before accessing 'this' or returning from derived constructor
+        super(marca, modelo); 
         this.puertas = puertas; 
     }
 
