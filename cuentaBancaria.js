@@ -5,7 +5,7 @@ class CuentaBancaria {
     constructor(titular) {
         this.titular = titular;
     }
-
+    
     consultarSaldo() {
         return this.#saldo;
     }
@@ -15,4 +15,4 @@ const cuenta = new CuentaBancaria("Carlos");
 
 // ERROR: Intentar acceder directamente a una propiedad privada desde fuera de la clase.
 // Node.js lanzará un SyntaxError: Private field '#saldo' must be declared in an enclosing class
-console.log("Saldo desde el exterior:", cuenta.#saldo);
+console.log("Saldo desde el exterior:", cuenta.consultarSaldo());
